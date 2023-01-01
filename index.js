@@ -3,6 +3,12 @@ const voiceManager = new Collection();
 const config = require('./config.json');
 const command = require('./commands');
 
+const express = require('express');
+const bodyParser = require("body-parser");
+const router = express.Router();
+const app = express();
+const port = process.env.PORT || 3000;
+
 const client = new Client({
   intents: [
     GatewayIntentBits.Guilds,
