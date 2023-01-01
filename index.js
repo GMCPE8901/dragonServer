@@ -45,6 +45,9 @@ client.on('ready', () => {
   
 })
 
+app.get('/', (req, res) => {
+  res.send('hello world')
+})
 
  /*client.on('voiceStateUpdate', async (oS, nS) => {
   const user = await client.users.fetch(nS.id);
@@ -63,3 +66,7 @@ client.on('ready', () => {
 })*/
 
 client.login(config.TOKEN)
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`);
+});
