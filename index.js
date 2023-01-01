@@ -3,12 +3,6 @@ const voiceManager = new Collection();
 const config = require('./config.json');
 const command = require('./commands');
 
-const express = require('express');
-const bodyParser = require("body-parser");
-const router = express.Router();
-const app = express();
-const port = process.env.PORT || 3000;
-
 const client = new Client({
   intents: [
     GatewayIntentBits.Guilds,
@@ -45,9 +39,6 @@ client.on('ready', () => {
   
 })
 
-app.get('/', (req, res) => {
-  res.send('hello world')
-})
 
  /*client.on('voiceStateUpdate', async (oS, nS) => {
   const user = await client.users.fetch(nS.id);
@@ -66,7 +57,3 @@ app.get('/', (req, res) => {
 })*/
 
 client.login(config.TOKEN)
-
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
-});
