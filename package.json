@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "gmcpe890",
   "license": "ISC",
   "dependencies": {
     "@discordjs/voice": "^0.14.0",
